@@ -48,8 +48,8 @@
 
     <TextView
         android:id="@+id/cappucino_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="7dp"
+        android:layout_height="16dp"
         android:layout_marginTop="20dp"
         android:text="0"
         android:textColor="#FFFFFF"
