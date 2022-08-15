@@ -167,6 +167,7 @@
         android:layout_marginEnd="48dp"
         android:backgroundTint="#000000"
         android:text="kembali"
+        android:textColor="@color/soft_pink"
         app:layout_constraintBottom_toBottomOf="@+id/btnNext"
         app:layout_constraintEnd_toStartOf="@+id/btnNext"
         app:layout_constraintHorizontal_bias="0.652"

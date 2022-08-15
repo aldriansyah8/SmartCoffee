@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" value="0.2115" />
+        <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/drawable/ic_baseline_remove_circle_outline_24.xml" value="0.194" />
         <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_empty_stock.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_history.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_history_user.xml" value="0.22" />
-        <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_login.xml" value="0.19972826086956522" />
-        <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_menu.xml" value="0.25" />
         <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_notif_proses.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Yohana Eva C/Documents/AndroidStudio/SmartCoffe/app/src/main/res/layout/activity_order.xml" value="0.20416666666666666" />
