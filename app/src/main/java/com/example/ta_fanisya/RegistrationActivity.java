@@ -47,7 +47,6 @@ public class RegistrationActivity extends AppCompatActivity {
         Btn = findViewById(R.id.btnregister);
         progressbar = findViewById(R.id.progressbar);
         logintxt = findViewById(R.id.txtLogin);
-        pwsCheck = findViewById(R.id.passwd);
         regisTV = findViewById(R.id.regis_name);
 
 
@@ -107,7 +106,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     .show();
             return;
         }
-        if(password != conPwd){
+        if(!password.equals(conPwd)){
             Toast.makeText(
                             getApplicationContext(),
                             "Password tidak cocok",

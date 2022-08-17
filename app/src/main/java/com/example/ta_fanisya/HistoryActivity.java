@@ -69,7 +69,7 @@ public class HistoryActivity extends AppCompatActivity {
         btnSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri = Uri.parse("https://docs.google.com/spreadsheets/d/1b2DtuvL4oA8znIp6EBRCSuXLrL-80aGa9FT28bcXyac/edit#gid=0"); // missing 'http://' will cause crashed
+                Uri uri = Uri.parse("https://docs.google.com/spreadsheets/d/1b2DtuvL4oA8znIp6EBRCSuXLrL-80aGa9FT28bcXyac/edit?pli=1#gid=0"); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
