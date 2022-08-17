@@ -38,8 +38,12 @@ public class HistoryUserActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.hisUser_back_btn);
         // To display the Recycler view linearly
 
-        recyclerView.setLayoutManager(
-                new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(
+//                new LinearLayoutManager(this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
         // It is a class provide by the FirebaseUI to make a
         // query in the database to fetch appropriate data
@@ -51,10 +55,7 @@ public class HistoryUserActivity extends AppCompatActivity {
         // the Adapter class itself
         adapter = new historyUserAdapter(options);
         // Connecting Adapter class with the Recycler view*/
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setReverseLayout(true);
-        linearLayoutManager.setStackFromEnd(true);
-        recyclerView.setLayoutManager(linearLayoutManager);
+
         recyclerView.setAdapter(adapter);
 
         btnBack.setOnClickListener(new View.OnClickListener() {

@@ -38,8 +38,12 @@ public class HistoryActivity extends AppCompatActivity {
         btnSheet = findViewById(R.id.his_back_sheet);
 
         // To display the Recycler view linearly
-        recyclerView.setLayoutManager(
-                new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(
+//                new LinearLayoutManager(this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
         // It is a class provide by the FirebaseUI to make a
         // query in the database to fetch appropriate data
@@ -51,10 +55,7 @@ public class HistoryActivity extends AppCompatActivity {
         // the Adapter class itself
         adapter = new historyAdapter(options);
         // Connecting Adapter class with the Recycler view*/
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setReverseLayout(true);
-        linearLayoutManager.setStackFromEnd(true);
-        recyclerView.setLayoutManager(linearLayoutManager);
+
         recyclerView.setAdapter(adapter);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +70,7 @@ public class HistoryActivity extends AppCompatActivity {
         btnSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri = Uri.parse("https://docs.google.com/spreadsheets/d/1b2DtuvL4oA8znIp6EBRCSuXLrL-80aGa9FT28bcXyac/edit#gid=0"); // missing 'http://' will cause crashed
+                Uri uri = Uri.parse("https://docs.google.com/spreadsheets/d/1b2DtuvL4oA8znIp6EBRCSuXLrL-80aGa9FT28bcXyac/edit?pli=1#gid=0"); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
