@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                                     // if sign-in is successful
                                     // intent to home activity
                                     Intent intent;
-                                    if(user.equals("admin")){
+                                    if(user.equals("xzyab")){
                                         intent = new Intent(LoginActivity.this,
                                                 HistoryActivity.class);
 
@@ -118,6 +118,7 @@ public class LoginActivity extends AppCompatActivity {
                                         intent = new Intent(LoginActivity.this,
                                                 MainActivity.class);
                                     }
+
                                     startActivity(intent);
 
                                 }

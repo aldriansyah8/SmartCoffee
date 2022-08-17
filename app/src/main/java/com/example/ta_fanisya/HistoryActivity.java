@@ -51,13 +51,17 @@ public class HistoryActivity extends AppCompatActivity {
         // the Adapter class itself
         adapter = new historyAdapter(options);
         // Connecting Adapter class with the Recycler view*/
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Intent i = new Intent(HistoryActivity.this,LoginActivity.class);
+                Intent i = new Intent(HistoryActivity.this,ChooseActivity.class);
                 startActivity(i);
             }
         });

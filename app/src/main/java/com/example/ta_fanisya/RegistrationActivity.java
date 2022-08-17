@@ -43,6 +43,7 @@ public class RegistrationActivity extends AppCompatActivity {
         // initialising all views through id defined above
         emailTextView = findViewById(R.id.regis_email);
         passwordTextView = findViewById(R.id.passwd);
+        pwsCheck = findViewById(R.id.conf_pwd);
         Btn = findViewById(R.id.btnregister);
         progressbar = findViewById(R.id.progressbar);
         logintxt = findViewById(R.id.txtLogin);
@@ -76,34 +77,53 @@ public class RegistrationActivity extends AppCompatActivity {
         progressbar.setVisibility(View.VISIBLE);
 
         // Take the value of two edit texts in Strings
-        String email, password;
+        String email, password,conPwd;
         email = emailTextView.getText().toString();
         password = passwordTextView.getText().toString();
-
+        conPwd = pwsCheck.getText().toString();
         userName = regisTV.getText().toString();
-        user = email.substring(0,5);
-        int saldo = 100000;
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("user").child(user).child("name");
-        myRef.setValue(userName);
-        myRef = database.getReference("user").child(user).child("saldo");
-        myRef.setValue(saldo);
 
         // Validations for input email and password
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(),
-                    "Please enter email!!",
+                    "Silahkan isi email!!",
                     Toast.LENGTH_LONG)
                     .show();
             return;
         }
         if (TextUtils.isEmpty(password)) {
             Toast.makeText(getApplicationContext(),
-                    "Please enter password!!",
+                    "Silahkan isi password!!",
                     Toast.LENGTH_LONG)
                     .show();
             return;
         }
+
+        if(password.length()< 6){
+            Toast.makeText(
+                            getApplicationContext(),
+                            "Password terlalu pendek",
+                            Toast.LENGTH_LONG)
+                    .show();
+            return;
+        }
+        if(password != conPwd){
+            Toast.makeText(
+                            getApplicationContext(),
+                            "Password tidak cocok",
+                            Toast.LENGTH_LONG)
+                    .show();
+            return;
+        }
+
+        user = email.substring(0,5);
+        int saldo = 100000;
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user").child(user).child("name");
+        myRef.setValue(userName);
+        myRef = database.getReference("user").child(user).child("saldo");
+        myRef.setValue(saldo);
 
         // create new user or register new user
          mAuth
@@ -115,7 +135,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(),
-                                    "Registration successful!",
+                                    "Registrasi Berhasil!",
                                     Toast.LENGTH_LONG)
                                     .show();
 
@@ -125,15 +145,18 @@ public class RegistrationActivity extends AppCompatActivity {
                             // if the user created intent to login activity
                             Intent i = new Intent(RegistrationActivity.this,
                                     LoginActivity.class);
-                            startActivity(i);
+
+                                startActivity(i);
+
+
                         }
                         else {
 
                             // Registration failed
                             Toast.makeText(
                                     getApplicationContext(),
-                                    "Registration failed!!"
-                                            + " Please try again later",
+                                    "Registrasi Gagal!!"
+                                            + " Silahkan Coba lagi",
                                     Toast.LENGTH_LONG)
                                     .show();
 

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tafanisya">
         <activity
+            android:name=".ChooseActivity"
+            android:exported="false" />
+        <activity
             android:name=".HistoryUserActivity"
             android:exported="false" />
         <activity

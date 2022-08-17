@@ -51,6 +51,10 @@ public class HistoryUserActivity extends AppCompatActivity {
         // the Adapter class itself
         adapter = new historyUserAdapter(options);
         // Connecting Adapter class with the Recycler view*/
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
 
         btnBack.setOnClickListener(new View.OnClickListener() {

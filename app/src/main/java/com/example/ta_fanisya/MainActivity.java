@@ -25,7 +25,7 @@ import com.journeyapps.barcodescanner.ScanOptions;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnMenu,btnTop,btnHistory,btnLogout;
+    private Button btnMenu, btnTop50,btnTop100,btnHistory,btnLogout;
     private TextView usertv, saldoCnt ;
     protected static Integer saldo;
 
@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         btnMenu = findViewById(R.id.btnQR);
         usertv = findViewById(R.id.name_tv);
         saldoCnt = findViewById(R.id.saldo_tv);
-        btnTop = findViewById(R.id.topup_btn);
+        btnTop50 = findViewById(R.id.topup_btn);
+        btnTop100 = findViewById(R.id.topup_btn2);
         btnHistory = findViewById(R.id.his_btn);
         btnLogout = findViewById(R.id.user_logout_btn);
 
@@ -75,10 +76,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnTop.setOnClickListener(new View.OnClickListener() {
+        btnTop50.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                totalSaldo.setValue(100000);
+                totalSaldo.setValue(saldo + 50000);
+            }
+        });
+
+        btnTop100.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                totalSaldo.setValue(saldo + 100000);
             }
         });
 
