@@ -39,34 +39,31 @@
         android:id="@+id/cappMin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="216dp"
+        android:layout_marginStart="225dp"
         app:layout_constraintBottom_toBottomOf="@+id/cappucino_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cappucino_tv"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24" />
 
     <TextView
         android:id="@+id/cappucino_tv"
         android:layout_width="7dp"
         android:layout_height="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="0"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/cappAdd_btn"
         app:layout_constraintStart_toEndOf="@+id/cappMin_btn"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <ImageView
         android:id="@+id/cappAdd_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
         app:layout_constraintBottom_toBottomOf="@+id/cappucino_tv"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kopisusuAdd_btn"
         app:layout_constraintTop_toTopOf="@+id/cappucino_tv"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
 
     <TextView
@@ -93,14 +90,15 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/kopisusuAdd_btn"
         app:layout_constraintStart_toEndOf="@+id/kopisusuMin_btn"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ImageView
         android:id="@+id/kopisusuMin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="225dp"
         app:layout_constraintBottom_toBottomOf="@+id/kopisusu_tv"
-        app:layout_constraintStart_toStartOf="@+id/cappMin_btn"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/kopisusu_tv"
         app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24" />
 
@@ -109,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/kopisusu_tv"
-        app:layout_constraintEnd_toEndOf="@+id/cappAdd_btn"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="@+id/kopisusu_tv"
         app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
 
@@ -118,32 +116,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/coklat_tv"
-        app:layout_constraintEnd_toEndOf="@+id/cappAdd_btn"
+        app:layout_constraintEnd_toEndOf="@+id/kopisusuAdd_btn"
         app:layout_constraintTop_toTopOf="@+id/coklat_tv"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
 
     <TextView
         android:id="@+id/coklat_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="0"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/coklatAdd_btn"
-        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toEndOf="@+id/coklatMin_btn"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageView
         android:id="@+id/coklatMin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="225dp"
         app:layout_constraintBottom_toBottomOf="@+id/coklat_tv"
-        app:layout_constraintStart_toStartOf="@+id/cappMin_btn"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/coklat_tv"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24" />
 
     <TextView
@@ -178,12 +176,12 @@
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="58dp"
         android:layout_marginEnd="44dp"
         android:backgroundTint="@color/white"
         android:text="selanjutnya"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kopisusu_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/coklat_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
