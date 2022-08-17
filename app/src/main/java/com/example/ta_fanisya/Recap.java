@@ -157,7 +157,7 @@ public class Recap extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("https://script.google.com/macros/s/AKfycbxeKXmquihKg9VNTs807IEFvd68YvRLfPjq1N_73KhLsJh8gW4hnNIw4aALI4MF7Z8MtQ/exec");
+                URL url = new URL("https://script.google.com/macros/s/AKfycbzF8noqpRjjIs9n4yJuVJspu2BBG5Gx0orwgbGcbD3InEejZydTsD21i--imNH_R3mKEQ/exec");
 
                 JSONObject postDataParams = new JSONObject();
 
@@ -173,6 +173,9 @@ public class Recap extends AppCompatActivity {
                 postDataParams.put("name",userName);
                 postDataParams.put("totalOrder",totalOrder);
                 postDataParams.put("totalPrice",totalPrice);
+                postDataParams.put("cappucino",cappucinoCnt);
+                postDataParams.put("kopisusu",kopisusuCnt);
+                postDataParams.put("coklat",coklatCnt);
                 //postDataParams.put("id",id);
 
 
